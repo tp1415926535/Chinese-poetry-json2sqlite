@@ -42,6 +42,7 @@ def fillInToData(tableName,columns,diclist):
 def getNameIdDic(tableName,columnName,idColumn):
 	data={}
 	sql=f'SELECT {idColumn},{columnName} FROM {tableName}'
+	cur.execute(sql)
 	results=cur.fetchall()
 	for result in results:
 		data[result[columnName]]=result[idColumn]
