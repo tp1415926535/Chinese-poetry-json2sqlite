@@ -1,7 +1,6 @@
 # Chinese-poetry-json2sqlite
 将古诗词json转为sqlite本地数据库文件
 
-**当前版本的作者id读取有点bug，正在修复中...**
 
 # 前言
 * 最近想用诗词库查询，但是最知名的库 [chinese-poetry](https://github.com/chinese-poetry/chinese-poetry) 是json数据，看了看其他转数据库的项目都是已经好几年前的了，有的json格式对不上，有的还需要其他开发环境，非常不人性化，所以写了这个可以兼容不同json来源的转sqlite本地数据库表的项目。   
@@ -9,7 +8,7 @@
   
 # 使用方法
 * **方法1**：下载本项目的[Release](https://github.com/tp1415926535/Chinese-poetry-json2sqlite/releases/latest)的成品数据库文件。    
-* **方法2**：下载本项目文件，和最新版的 chinese-poetry 项目文件，修改 config.json 配置文件。然后运行 mainCode.py 脚本，或者封装好的 mainCode.exe 即可。目前生成数据库只需要三分钟左右。
+* **方法2**：下载本项目文件，和最新版的 chinese-poetry 项目文件，修改 config.json 配置文件。然后运行 mainCode.py 脚本，或者封装好的 mainCode.exe 即可。目前生成数据库耗时看电脑配置在三十秒到三分钟左右。
 
 ## 配置文件说明
 文件 **“config.json”** ，需要跟python脚本或者exe放在同一个目录下。
