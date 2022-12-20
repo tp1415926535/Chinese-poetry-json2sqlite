@@ -6,7 +6,7 @@
 * 为了适配各种json数据，本项目的霸道之处在于理论上可以匹配任何键值对形式的json，只需要调整配置文件即可（好像意外的实现了不得了的东西），所以不会编程也能改，也不会出现我遇到的json结构变化导致其他人的导出代码用不了还要研究源码的尴尬情况。
   
 # 使用方法
-* **方法1**：下载本项目的Release的成品数据库文件。    
+* **方法1**：下载本项目的[Release](https://github.com/tp1415926535/Chinese-poetry-json2sqlite/releases/latest)的成品数据库文件。    
 * **方法2**：下载本项目文件，和最新版的 chinese-poetry 项目文件，修改 config.json 配置文件。然后运行 mainCode.py 脚本，或者封装好的 mainCode.exe 即可。目前生成数据库只需要三分钟左右。
 
 ## 配置文件说明
