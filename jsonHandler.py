@@ -28,7 +28,6 @@ def jsonSaveToDb(filePath,tablename,mapping,ignoreList):
 			queryTarget = value["queryTarget"]
 			nameIdDics[key]= databaseManager.getNameIdDic(fromtable,queryColumn,queryTarget)
 
-
 	for item in toDbDatas:
 		keys = list(item.keys()).copy()
 		for key in keys: #移除不需要的数据
