@@ -1,0 +1,446 @@
+{
+    "dbPath": "Chinese-poetry.db",
+    "dataSourceFolder": "../chinese-poetry-master",
+    "ignoreSplitListName": [
+        "tags",
+        "paragraphs",
+        "abstract",
+        "preface"
+    ],
+    "tables": [
+        {
+            "tableName": "ci_song_author",
+            "dataSource": {
+                "folder": "ci",
+                "fileNameFormat": "author.song.json"
+            },
+            "columns": {
+                "id": null,
+                "name": "name",
+                "short_description": "short_description",
+                "description": "description"
+            }
+        },
+        {
+            "tableName": "ci_song",
+            "dataSource": {
+                "folder": "ci",
+                "fileNameFormat": "ci.song.*.json"
+            },
+            "columns": {
+                "id": null,
+                "author_id": {
+                    "table": "ci_song_author",
+                    "currentColumn": "author",
+                    "queryColumn": "name",
+                    "queryTarget": "id"
+                },
+                "author": "author",
+                "rhythmic": "rhythmic",
+                "paragraphs": "paragraphs"
+            }
+        },
+        {
+            "tableName": "shi_song_author",
+            "dataSource": {
+                "folder": "json",
+                "fileNameFormat": "authors.song.json"
+            },
+            "columns": {
+                "id": null,
+                "name": "name",
+                "desc": "desc"
+            }
+        },
+        {
+            "tableName": "shi_song",
+            "dataSource": {
+                "folder": "json",
+                "fileNameFormat": "poet.song.*.json"
+            },
+            "columns": {
+                "id": null,
+                "author_id": {
+                    "table": "shi_song_author",
+                    "currentColumn": "author",
+                    "queryColumn": "name",
+                    "queryTarget": "id"
+                },
+                "author": "author",
+                "title": "title",
+                "paragraphs": "paragraphs"
+            }
+        },
+        {
+            "tableName": "shi_tang_author",
+            "dataSource": {
+                "folder": "json",
+                "fileNameFormat": "authors.tang.json"
+            },
+            "columns": {
+                "id": null,
+                "name": "name",
+                "desc": "desc"
+            }
+        },
+        {
+            "tableName": "shi_tang",
+            "dataSource": {
+                "folder": "json",
+                "fileNameFormat": "poet.tang.*.json"
+            },
+            "columns": {
+                "id": null,
+                "author_id": {
+                    "table": "shi_tang_author",
+                    "currentColumn": "author",
+                    "queryColumn": "name",
+                    "queryTarget": "id"
+                },
+                "author": "author",
+                "title": "title",
+                "paragraphs": "paragraphs"
+            }
+        },
+        {
+            "tableName": "shijing",
+            "dataSource": {
+                "folder": "shijing",
+                "fileNameFormat": "shijing.json"
+            },
+            "columns": {
+                "id": null,
+                "title": "title",
+                "chapter": "chapter",
+                "section": "section",
+                "content": "content"
+            }
+        },
+        {
+            "tableName": "wudai_huajianji",
+            "dataSource": {
+                "folder": "wudai/huajianji",
+                "fileNameFormat": "huajianji-*.json"
+            },
+            "columns": {
+                "id": null,
+                "title": "title",
+                "rhythmic": "rhythmic",
+                "author": "author",
+                "paragraphs": "paragraphs",
+                "notes": "notes"
+            }
+        },
+        {
+            "tableName": "wudai_nantang_author",
+            "dataSource": {
+                "folder": "wudai/nantang",
+                "fileNameFormat": "authors.json"
+            },
+            "columns": {
+                "id": null,
+                "name": "name",
+                "desc": "desc"
+            }
+        },
+        {
+            "tableName": "wudai_nantang",
+            "dataSource": {
+                "folder": "wudai/nantang",
+                "fileNameFormat": "poetrys.json"
+            },
+            "columns": {
+                "id": null,
+                "author_id": {
+                    "table": "wudai_nantang_author",
+                    "currentColumn": "author",
+                    "queryColumn": "name",
+                    "queryTarget": "id"
+                },
+                "title": "title",
+                "rhythmic": "rhythmic",
+                "author": "author",
+                "paragraphs": "paragraphs",
+                "notes": "notes"
+            }
+        },
+        {
+            "tableName": "nalanxingde",
+            "dataSource": {
+                "folder": "nalanxingde",
+                "fileNameFormat": "纳兰性德诗集.json"
+            },
+            "columns": {
+                "id": null,
+                "title": "title",
+                "author": "author",
+                "para": "para"
+            }
+        },
+        {
+            "tableName": "lunyu",
+            "dataSource": {
+                "folder": "lunyu",
+                "fileNameFormat": "lunyu.json"
+            },
+            "columns": {
+                "id": null,
+                "chapter": "chapter",
+                "paragraphs": "paragraphs"
+            }
+        },
+        {
+            "tableName": "youmengying",
+            "dataSource": {
+                "folder": "youmengying",
+                "fileNameFormat": "youmengying.json"
+            },
+            "columns": {
+                "id": null,
+                "content": "content",
+                "comment": "comment"
+            }
+        },
+        {
+            "tableName": "sishuwujing",
+            "dataSource": {
+                "folder": "sishuwujing",
+                "fileNameFormat": "*.json"
+            },
+            "columns": {
+                "id": null,
+                "chapter": "chapter",
+                "paragraphs": "paragraphs"
+            }
+        },
+        {
+            "tableName": "mengxue_baijiaxing",
+            "dataSource": {
+                "folder": "mengxue",
+                "fileNameFormat": "baijiaxing.json"
+            },
+            "columns": {
+                "id": null,
+                "surname": "surname",
+                "originplace": "place"
+            }
+        },
+        {
+            "tableName": "mengxue_dizigui",
+            "dataSource": {
+                "folder": "mengxue",
+                "fileNameFormat": "dizigui.json"
+            },
+            "columns": {
+                "id": null,
+                "chapter": "chapter",
+                "paragraphs": "paragraphs"
+            }
+        },
+        {
+            "tableName": "mengxue_guwenguanzhi",
+            "dataSource": {
+                "folder": "mengxue",
+                "fileNameFormat": "guwenguanzhi.json",
+                "nodeParent": ""
+            },
+            "columns": {
+                "id": null,
+                "title": "title",
+                "chapter": "chapter",
+                "source": "source",
+                "author": "author",
+                "paragraphs": "paragraphs"
+            }
+        },
+        {
+            "tableName": "mengxue_qianjiashi",
+            "dataSource": {
+                "folder": "mengxue",
+                "fileNameFormat": "qianjiashi.json"
+            },
+            "columns": {
+                "id": null,
+                "type": "type",
+                "chapter": "chapter",
+                "author": "author",
+                "paragraphs": "paragraphs"
+            }
+        },
+        {
+            "tableName": "mengxue_qianziwen",
+            "dataSource": {
+                "folder": "mengxue",
+                "fileNameFormat": "qianziwen.json"
+            },
+            "columns": {
+                "id": null,
+                "title": "title",
+                "author": "author",
+                "tags": "tags",
+                "paragraphs": "paragraphs",
+                "spells": "spells"
+            }
+        },
+        {
+            "tableName": "mengxue_sanzijing-new",
+            "dataSource": {
+                "folder": "mengxue",
+                "fileNameFormat": "sanzijing-new.json"
+            },
+            "columns": {
+                "id": null,
+                "title": "title",
+                "author": "author",
+                "tags": "tags",
+                "paragraphs": "paragraphs"
+            }
+        },
+        {
+            "tableName": "mengxue_sanzijing-traditional",
+            "dataSource": {
+                "folder": "mengxue",
+                "fileNameFormat": "sanzijing-traditional.json"
+            },
+            "columns": {
+                "id": null,
+                "title": "title",
+                "author": "author",
+                "tags": "tags",
+                "paragraphs": "paragraphs"
+            }
+        },
+        {
+            "tableName": "mengxue_shenglvqimeng",
+            "dataSource": {
+                "folder": "mengxue",
+                "fileNameFormat": "shenglvqimeng.json"
+            },
+            "columns": {
+                "id": null,
+                "title": "title",
+                "chapter": "chapter",
+                "paragraphs": "paragraphs"
+            }
+        },
+        {
+            "tableName": "mengxue_tangshisanbaishou",
+            "dataSource": {
+                "folder": "mengxue",
+                "fileNameFormat": "tangshisanbaishou.json"
+            },
+            "columns": {
+                "id": null,
+                "type": "type",
+                "chapter": "chapter",
+                "subchapter": "subchapter",
+                "author": "author",
+                "paragraphs": "paragraphs"
+            }
+        },
+        {
+            "tableName": "mengxue_wenzimengqiu",
+            "dataSource": {
+                "folder": "mengxue",
+                "fileNameFormat": "wenzimengqiu.json"
+            },
+            "columns": {
+                "id": null,
+                "title": "title",
+                "paragraphs": "paragraphs"
+            }
+        },
+        {
+            "tableName": "mengxue_youxueqionglin",
+            "dataSource": {
+                "folder": "mengxue",
+                "fileNameFormat": "youxueqionglin.json"
+            },
+            "columns": {
+                "id": null,
+                "title": "title",
+                "chapter": "chapter",
+                "paragraphs": "paragraphs"
+            }
+        },
+        {
+            "tableName": "mengxue_zengguangxianwen",
+            "dataSource": {
+                "folder": "mengxue",
+                "fileNameFormat": "zengguangxianwen.json"
+            },
+            "columns": {
+                "id": null,
+                "chapter": "chapter",
+                "paragraphs": "paragraphs"
+            }
+        },
+        {
+            "tableName": "mengxue_zhuzijiaxun",
+            "dataSource": {
+                "folder": "mengxue",
+                "fileNameFormat": "zhuzijiaxun.json"
+            },
+            "columns": {
+                "id": null,
+                "title": "title",
+                "author": "author",
+                "paragraphs": "paragraphs"
+            }
+        },
+        {
+            "tableName": "caocaoshiji",
+            "dataSource": {
+                "folder": "caocaoshiji",
+                "fileNameFormat": "caocao.json"
+            },
+            "columns": {
+                "id": null,
+                "title": "title",
+                "paragraphs": "paragraphs"
+            }
+        },
+        {
+            "tableName": "caocaoshiji",
+            "dataSource": {
+                "folder": "caocaoshiji",
+                "fileNameFormat": "caocao.json"
+            },
+            "columns": {
+                "id": null,
+                "title": "title",
+                "paragraphs": "paragraphs"
+            }
+        },
+        {
+            "tableName": "quan_tang_shi",
+            "dataSource": {
+                "folder": "quan_tang_shi/json",
+                "fileNameFormat": "*.json"
+            },
+            "columns": {
+                "id": null,
+                "title": "title",
+                "author": "author",
+                "biography": "biography",
+                "paragraphs": "paragraphs",
+                "notes": "notes",
+                "volume": "volume"
+            }
+        },
+        {
+            "tableName": "yuanqu",
+            "dataSource": {
+                "folder": "yuanqu",
+                "fileNameFormat": "yuanqu.json"
+            },
+            "columns": {
+                "id": null,
+                "title": "title",                
+                "dynasty": "dynasty",
+                "author": "author",
+                "paragraphs": "paragraphs"
+            }
+        }
+    ]
+}
