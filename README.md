@@ -1,6 +1,8 @@
 # Chinese-poetry-json2sqlite
 将古诗词json转为sqlite本地数据库文件
 
+**当前版本的作者id读取有点bug，正在修复中...**
+
 # 前言
 * 最近想用诗词库查询，但是最知名的库 [chinese-poetry](https://github.com/chinese-poetry/chinese-poetry) 是json数据，看了看其他转数据库的项目都是已经好几年前的了，有的json格式对不上，有的还需要其他开发环境，非常不人性化，所以写了这个可以兼容不同json来源的转sqlite本地数据库表的项目。   
 * 为了适配各种json数据，本项目的霸道之处在于理论上可以匹配任何键值对形式的json，只需要调整配置文件即可（好像意外的实现了不得了的东西），所以不会编程也能改，也不会出现我遇到的json结构变化导致其他人的导出代码用不了还要研究源码的尴尬情况。
