@@ -47,6 +47,7 @@ def init():
 
 	if ("tables" not in config)| (len(config["tables"])<=0):
 		print("无数据需要建立，请添加配置文件 tables 的子项！")
+		input("按下回车键退出")
 		sys.exit()
 
 
