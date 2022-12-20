@@ -76,30 +76,40 @@
 
 ## 注意事项
   虽然这个代码兼容性已经很强了，但是还要注意json数据来源的格式。
-  json数据源若存在多个字典值需要以数组的形式，如：
+  json数据源字段名应该放在值内，而不是放在键里，如：
 ```json
 [
-  {
-    "author": "xxxxx", 
-    "rhythmic": "xxxxxx"
+  { 
+      "title":"标题1",
+      "item":
+      {
+        "author": "xxxxx", 
+        "rhythmic": "xxxxxx"
+      }
   }, 
-  {
-    "author": "xxxxx", 
-    "rhythmic": "xxxxxx"
-  }
+  { 
+      "title":"标题2",
+      "item": 
+      {
+        "author": "xxxxx", 
+        "rhythmic": "xxxxxx"
+      }
+  },
 ]
 ```
-   不能是这样而不用数组：
+   而不是直接作为键：
 ```json
 {
-  "xxxxx": {
-    "author": "xxxxx", 
-    "rhythmic": "xxxxxx"
-  }, 
-  "xxxxx": {
-    "author": "xxxxx", 
-    "rhythmic": "xxxxxx"
-  }
+    "标题1": 
+    {
+      "author": "xxxxx", 
+      "rhythmic": "xxxxxx"
+    }, 
+    "标题2": 
+    {
+      "author": "xxxxx", 
+      "rhythmic": "xxxxxx"
+    }
 }
 ```
-  这是完全不同的格式，会导致代码出问题。所幸的是 chinese-poetry 的json格式都是统一的，只要数据源是前者的格式即可正常运行。
+  这是完全不同的格式，会导致出现错误的结果。所幸的是 chinese-poetry 的json格式是统一的，只要数据源是前者的格式即可正常运行。
