@@ -12,7 +12,7 @@
 
 ## 配置文件说明
 文件 **“config.json”** ，需要跟python脚本或者exe放在同一个目录下。       
-它的内容大概是这样，最基本的使用只需要将["dataSourceFolder"]的值改为 chinese-poetry 项目文件夹路径：
+它的内容大概是这样，最基本的使用只需要将 ["dataSourceFolder"] 的值改为 chinese-poetry 项目文件夹路径：
 ```json
 {
     "dbPath": "Chinese-poetry.db",  //生成的数据库文件路径（支持相对路径和绝对路径）
