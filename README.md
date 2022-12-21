@@ -46,7 +46,7 @@
             "columns": {
                 "id": null, // id列，默认带上
                 "author_id": {  //author_id 无法从json文件中直接获取，这里通过其他表读取
-                    "table": "ci_song_author", //读取的目标表
+                    "table": "ci_song_author", //读取的目标表（目标表的顺序要放在前面，先生成才不会出错）
                     "currentColumn": "author", //查询依据的当前json字段
                     "queryColumn": "name",     //查询目标表的对应列
                     "queryTarget": "id"        //查询目标表返回值所在列
