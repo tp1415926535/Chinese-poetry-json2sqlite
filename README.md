@@ -5,6 +5,11 @@
 # 前言
 * 最近想用诗词库查询，但是最知名的库 [chinese-poetry](https://github.com/chinese-poetry/chinese-poetry) 是json数据，看了看其他转数据库的项目都是已经好几年前的了，有的json格式对不上，有的还需要其他开发环境，非常不人性化，所以写了这个可以兼容不同json来源的转sqlite本地数据库表的项目。   
 * 为了适配各种json数据，本项目的霸道之处在于理论上可以匹配任何键值对形式的json，只需要调整配置文件即可（好像意外的实现了不得了的东西），所以不会编程也能改，也不会出现我遇到的json结构变化导致其他人的导出代码用不了还要研究源码的尴尬情况。
+
+* [当前项目](https://github.com/tp1415926535/Chinese-poetry-json2sqlite) 是基于 [chinese-poetry](https://github.com/chinese-poetry/chinese-poetry) 项目的数据（json文件）。    
+  另外我还写了个项目 [Poetry-sqlite](https://github.com/tp1415926535/Poetry-sqlite) 是基于 [Poetry](https://github.com/Werneror/Poetry) 项目的数据（csv文件）。        
+  都是将诗词库转为sqlite本地数据库。
+  
   
 # 使用方法
 * **方法1**：下载本项目的[Release](https://github.com/tp1415926535/Chinese-poetry-json2sqlite/releases/latest)的成品数据库文件。    
